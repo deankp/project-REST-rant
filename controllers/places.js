@@ -28,6 +28,7 @@ router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
+// Show route
 router.get('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
@@ -41,6 +42,7 @@ router.get('/:id', (req, res) => {
   }
 })
 
+// Delete Route
 router.delete('/places/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
