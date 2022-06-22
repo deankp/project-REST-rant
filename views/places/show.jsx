@@ -9,6 +9,9 @@ function show (data) {
               <div className="row align-items-center">
                 <div className="col">
                 <img src={ data.place.pic } alt={ data.place.name } />
+                <h3>
+                  Located in {data.place.city}, {data.place.state}
+                </h3>
                 </div>
                 <div className="col">
                   <h1>{ data.place.name }</h1>
@@ -16,7 +19,12 @@ function show (data) {
                   <p>Not Rated</p>
 
                   <h2>Description</h2>
-                  <p>Located in { data.place.city }, { data.place.state } and serves { data.place.cuisines}</p>
+                  <h3>
+                    {data.place.showEstablished()}
+                  </h3>
+                  <h4>
+                    Serving {data.place.cuisines}
+                  </h4>
                 </div>
               </div>
 
